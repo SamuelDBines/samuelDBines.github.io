@@ -5,7 +5,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="./css/styles.css" rel="stylesheet" />
-		<script src="./js/time.js" defer></script>
 		<title>Samuel Bines</title>
 		<meta
 			name="description"
@@ -16,7 +15,7 @@
 		<header class="site-header">
 			<div class="container header-inner">
 				<div class="brand">
-					<span class="brand-mark">&gt;_</span>
+					<span id="brand-mark" class="brand-mark" ></span> 
 					<span class="brand-name">Samuel Bines</span>
 				</div>
 				<nav class="site-nav">
@@ -31,7 +30,7 @@
 			<section id="about" class="section">
 				<div class="about-layout">
 					<div>
-						<h1>AI Developer &amp; Cloud-Native Architect</h1>
+						<h1><span id="brand-mark" class="brand-mark" ></span> AI Developer &amp; Cloud-Native Architect</h1>
 						<p>
 							I’m a software developer and architect focused on AI, DevOps and
 							cloud-native platforms. I’ve worked across government and
@@ -55,7 +54,7 @@
 				</div>
 			</section>
 			<section id="ideas" class="section">
-				<h2>Ideas / Notes</h2>
+				<h2><span id="brand-mark" class="brand-mark" ></span>Ideas / Notes</h2>
 				<p class="section-intro">
 					Short notes on things I’m exploring. These are more like lab notes
 					than finished blog posts.
@@ -75,7 +74,7 @@
 				</div>
 			</section>
 			<section id="career" class="section">
-				<h2>Career &amp; Interests</h2>
+				<h2><span id="brand-mark" class="brand-mark" ></span>Career &amp; Interests</h2>
 				<p>
 					Most of my experience sits between <strong>DevOps</strong> and
 					<strong>application development</strong>:
@@ -108,7 +107,7 @@
 				</p>
 			</section>
 			<section id="hobbies" class="section">
-				<h2>Hobbies &amp; Life</h2>
+				<h2><span id="brand-mark" class="brand-mark" ></span>Hobbies &amp; Life</h2>
 				<p>
 					Outside of work I prioritise family life and staying grounded away
 					from screens. I like experimenting with small side projects, reading
@@ -118,10 +117,12 @@
 			</section>
 			<footer class="site-footer">
 				<div class="container">
-					<small>&copy; <span id="year"></span> Samuel Bines</small>
+					<small
+						>&copy; <span id="year"></span> Samuel Bines					
 				</div>
 			</footer>
 		</main>
 		<script src="js/ideas.js"></script>
+		<script src="js/time.js" defer></script>
 	</body>
 </html>

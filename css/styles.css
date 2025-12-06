@@ -1,4 +1,5 @@
 :root {
+	/* Colours */
 	--primary-bg-color: #f7f7fa;
 	--primary-text-color: #333333;
 	--primary-text-dark-color: #111827;
@@ -9,6 +10,9 @@
 	--retro-color: #f97316;
 	--card-bg: #ffffff;
 	--card-border: #e5e7eb;
+
+	/* Sizes  */
+	--header-height: 64px;
 }
 
 body {
@@ -31,6 +35,16 @@ a:hover {
 .site-header {
 	background: #ffffff;
 	border-bottom: 1px solid var(--card-border);
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+.header-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 0;
 }
 
 .container {
@@ -74,6 +88,7 @@ a:hover {
 	border-radius: 10px;
 	padding: 2rem;
 	margin: 2rem 0;
+	scroll-margin-top: var(--header-height, 64px);
 }
 
 .section h1,

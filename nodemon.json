@@ -2,7 +2,7 @@
   "watch": [
     "."
   ],
-  "ext": "html,css,mjs",
+  "ext": "html,css,mjs,js",
   "ignore": [
     "node_modules/**/node_modules"
   ],
