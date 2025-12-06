@@ -8,6 +8,12 @@ esbuild
 		minify: true,
 		logLevel: 'info',
 		sourcemap: true,
-		loader: { '.js': 'jsx' },
+		format: 'esm',
+		loader: {
+			'.jsx': 'jsx',
+			'.js': 'js',
+		},
+		jsxFactory: 'h',
+		jsxFragment: 'Fragment',
 	})
 	.catch(() => process.exit(1));

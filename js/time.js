@@ -1,3 +1,29 @@
+function mountTimeDisplay(el, initialCount = 0) {
+	let count = initialCount;
+
+	function render() {
+		const time = new Date().toLocaleTimeString();
+		el.innerHTML = `
+      <div id="time-display">
+        <p>Current Time: ${time} , ${count}</p>
+      </div>
+    `;
+	}
+
+	render();
+	const timer = setInterval(render, 1000);
+
+	return {
+		setCount(newCount) {
+			count = newCount;
+			render();
+		},
+		destroy() {
+			clearInterval(timer);
+		},
+	};
+}
+
 console.log('Time JS loaded', Date.now());
 
 if (typeof document === 'undefined') {
@@ -38,12 +64,18 @@ console.log('State item updated:', getItem());
 console.log('Final state item:', item);
 
 const button = document?.getElementById('test-button');
-const display = document?.getElementById('test-display');
+const widget = mountTimeDisplay(document.getElementById('test-display'));
 let count = 0;
-if (button && display) {
+if (button) {
 	button.addEventListener('click', () => {
 		setItem(count++);
-		display.textContent = `Current count: ${count++}`;
+		if (!widget) {
+			console.log(
+				'Button or display element not found, skipping event listener setup.'
+			);
+			return;
+		}
+		widget.setCount(count);
 	});
 } else {
 	console.log(

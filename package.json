@@ -8,7 +8,9 @@
     "test": "test"
   },
   "scripts": {
+    "build": "node esbuild.config.mjs",
     "dev": "nodemon",
+    "prestart": "pnpm run build",
     "start": "node server.mjs "
   },
   "keywords": [

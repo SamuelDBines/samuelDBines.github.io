@@ -4,7 +4,8 @@
   ],
   "ext": "html,css,mjs,js",
   "ignore": [
-    "node_modules/**/node_modules"
+    "node_modules/**/node_modules",
+    "dist/**"
   ],
   "exec": "npm run start"
 }
