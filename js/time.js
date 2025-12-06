@@ -2,11 +2,10 @@ console.log('Time JS loaded', Date.now());
 
 if (typeof document === 'undefined') {
 	console.log('No document object, skipping DOM updates');
-	return;
 }
 if (typeof window === 'undefined') {
 	console.log('No window object, skipping DOM updates');
-	return;
+	//return;
 }
 
 const brandElements = document.querySelectorAll('.brand-mark');
@@ -17,3 +16,37 @@ for (const el of brandElements) {
 const yearSpan = document?.getElementById('year');
 if (yearSpan && typeof yearSpan === 'object')
 	yearSpan.textContent = new Date().getFullYear();
+
+const stateHandler = () => {
+	let item = null;
+	const setItem = (newItem) => {
+		item = newItem;
+	};
+	const getItem = () => {
+		return item;
+	};
+	return { setItem, getItem, item };
+};
+
+console.log('Time JS finished', Date.now());
+
+const { getItem, setItem, item } = stateHandler();
+setItem('Hello from time.js state!');
+console.log('State item:', getItem());
+setItem('Another value');
+console.log('State item updated:', getItem());
+console.log('Final state item:', item);
+
+const button = document?.getElementById('test-button');
+const display = document?.getElementById('test-display');
+let count = 0;
+if (button && display) {
+	button.addEventListener('click', () => {
+		setItem(count++);
+		display.textContent = `Current count: ${count++}`;
+	});
+} else {
+	console.log(
+		'Button or display element not found, skipping event listener setup.'
+	);
+}

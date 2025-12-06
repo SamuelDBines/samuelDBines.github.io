@@ -19,6 +19,7 @@
   "author": "samuelbines@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "esbuild": "^0.27.1",
     "nodemon": "^3.1.11",
     "polka": "^0.5.2",
     "sirv": "^3.0.2"
