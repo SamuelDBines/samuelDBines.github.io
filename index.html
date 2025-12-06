@@ -7,12 +7,121 @@
 		<link href="./css/styles.css" rel="stylesheet" />
 		<script src="./js/time.js" defer></script>
 		<title>Samuel Bines</title>
-		<meta name="description">Samuel Bines Software Developer</description>
+		<meta
+			name="description"
+			content="Samuel Bines – AI developer, DevOps and cloud-native architect."
+		/>
 	</head>
 	<body>
-    <img src="./assets//sam-scotland.png" alt="Samuel Bines" width="200"/>
-		<button type="button" class="btn btn-secondary">Secondary</button>
-		<a href="/test">press me</a>
-		<a href="/compsc">press me as </a>
+		<header class="site-header">
+			<div class="container header-inner">
+				<div class="brand">
+					<span class="brand-mark">&gt;_</span>
+					<span class="brand-name">Samuel Bines</span>
+				</div>
+				<nav class="site-nav">
+					<a href="#about">About</a>
+					<a href="#ideas">Ideas</a>
+					<a href="#hobbies">Hobbies</a>
+					<a href="#career">Career</a>
+				</nav>
+			</div>
+		</header>
+		<main class="container">
+			<section id="about" class="section">
+				<div class="about-layout">
+					<div>
+						<h1>AI Developer &amp; Cloud-Native Architect</h1>
+						<p>
+							I’m a software developer and architect focused on AI, DevOps and
+							cloud-native platforms. I’ve worked across government and
+							enterprise environments, designing systems that are secure,
+							observable and easy to operate.
+						</p>
+						<p>
+							Day to day I blend
+							<strong>Golang, Python and Terraform</strong> with modern cloud
+							platforms to build reliable infrastructure for applications and AI
+							workloads.
+						</p>
+					</div>
+					<figure class="about-photo">
+						<img
+							src="./assets/sam-scotland.png"
+							alt="Samuel Bines"
+							width="220"
+						/>
+					</figure>
+				</div>
+			</section>
+			<section id="ideas" class="section">
+				<h2>Ideas / Notes</h2>
+				<p class="section-intro">
+					Short notes on things I’m exploring. These are more like lab notes
+					than finished blog posts.
+				</p>
+
+				<article id="idea-card" class="idea-card">
+					<h3 id="idea-title"></h3>
+					<p id="idea-tag" class="idea-tag"></p>
+					<p id="idea-body"></p>
+				</article>
+
+				<div class="idea-controls">
+					<button type="button" id="prev-idea" class="btn btn-secondary">
+						Previous
+					</button>
+					<button type="button" id="next-idea" class="btn">Next</button>
+				</div>
+			</section>
+			<section id="career" class="section">
+				<h2>Career &amp; Interests</h2>
+				<p>
+					Most of my experience sits between <strong>DevOps</strong> and
+					<strong>application development</strong>:
+				</p>
+				<ul>
+					<li>
+						Building and running platforms on Azure, AWS, Google Cloud, IBM
+						Cloud, Oracle Cloud and DigitalOcean.
+					</li>
+					<li>
+						Creating Terraform-based infrastructure, including custom providers
+						(e.g. for Tekton) to simplify platform usage.
+					</li>
+					<li>
+						Running Kubernetes and blockchain clusters, focusing on automation,
+						upgrades and observability.
+					</li>
+					<li>
+						Migrating complex frontends, including blending a legacy Vue&nbsp;2
+						app into React during a staged migration.
+					</li>
+					<li>
+						Delivering applications ahead of deadlines using solid databases and
+						straightforward, maintainable architectures.
+					</li>
+				</ul>
+				<p class="section-intro">
+					Client names and project details are intentionally kept high-level due
+					to confidentiality.
+				</p>
+			</section>
+			<section id="hobbies" class="section">
+				<h2>Hobbies &amp; Life</h2>
+				<p>
+					Outside of work I prioritise family life and staying grounded away
+					from screens. I like experimenting with small side projects, reading
+					about engineering history and generally tinkering with ideas that may
+					or may not become real products.
+				</p>
+			</section>
+			<footer class="site-footer">
+				<div class="container">
+					<small>&copy; <span id="year"></span> Samuel Bines</small>
+				</div>
+			</footer>
+		</main>
+		<script src="js/ideas.js"></script>
 	</body>
 </html>

@@ -1,0 +1,26 @@
+{
+  "name": "samueldbines.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "pages": "pages",
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node server.mjs "
+  },
+  "keywords": [
+    "Samuel",
+    "D",
+    "Bines"
+  ],
+  "author": "samuelbines@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.11",
+    "polka": "^0.5.2",
+    "sirv": "^3.0.2"
+  }
+}

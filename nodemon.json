@@ -1,0 +1,10 @@
+{
+  "watch": [
+    "."
+  ],
+  "ext": "html,css,mjs",
+  "ignore": [
+    "node_modules/**/node_modules"
+  ],
+  "exec": "npm run start"
+}

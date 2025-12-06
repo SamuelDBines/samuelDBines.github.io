@@ -7,6 +7,8 @@
 	--secondary-accent-color: #0f172a;
 	--highlight-color: #2563eb;
 	--retro-color: #f97316;
+	--card-bg: #ffffff;
+	--card-border: #e5e7eb;
 }
 
 body {
@@ -24,4 +26,125 @@ a {
 }
 a:hover {
 	text-decoration: underline;
+}
+
+.site-header {
+	background: #ffffff;
+	border-bottom: 1px solid var(--card-border);
+}
+
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.brand-mark {
+	font-family: 'SF Mono', ui-monospace, Menlo, Monaco, Consolas,
+		'Liberation Mono', 'Courier New', monospace;
+	color: var(--retro-color);
+	font-size: 1.1rem;
+}
+
+.brand-name {
+	font-weight: 600;
+	color: var(--primary-text-dark-color);
+}
+
+.site-nav a {
+	margin-left: 1rem;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--primary-accent-color);
+}
+.site-nav a:hover {
+	color: var(--highlight-color);
+}
+
+.section {
+	background: var(--card-bg);
+	border: 1px solid var(--card-border);
+	border-radius: 10px;
+	padding: 2rem;
+	margin: 2rem 0;
+}
+
+.section h1,
+.section h2 {
+	margin-top: 0;
+	color: var(--primary-text-dark-color);
+}
+
+.section-intro {
+	color: var(--primary-info-color);
+}
+
+.about-layout {
+	display: flex;
+	gap: 2rem;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.about-photo img {
+	border-radius: 8px;
+	border: 2px solid var(--card-border);
+}
+
+.idea-card {
+	margin-top: 1.5rem;
+	padding: 1.25rem;
+	border-radius: 8px;
+	border: 1px dashed var(--card-border);
+	background: #f9fafb;
+}
+
+.idea-tag {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: var(--primary-info-color);
+	margin-bottom: 0.5rem;
+}
+
+.idea-controls {
+	margin-top: 1rem;
+	display: flex;
+	gap: 0.75rem;
+}
+
+.btn {
+	padding: 0.5rem 1rem;
+	border-radius: 999px;
+	border: 1px solid var(--highlight-color);
+	background: var(--highlight-color);
+	color: #ffffff;
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+.btn:hover {
+	filter: brightness(1.05);
+}
+
+.btn-secondary {
+	border-color: var(--card-border);
+	background: #ffffff;
+	color: var(--primary-accent-color);
+}
+.btn-secondary:hover {
+	background: #f3f4f6;
+}
+
+.site-footer {
+	padding: 1.5rem 0 2rem;
+	font-size: 0.8rem;
+	color: var(--primary-info-color);
+	text-align: center;
 }
