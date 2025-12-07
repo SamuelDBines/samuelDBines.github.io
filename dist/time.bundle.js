@@ -1,0 +1,6 @@
+function a(e,s=0){let n=s;function t(){let o=new Date().toLocaleTimeString();e.innerHTML=`
+      <div id="time-display">
+        <p>Current Time: ${o} , ${n}</p>
+      </div>
+    `}t();let u=setInterval(t,1e3);return{setCount(o){n=o,t()},destroy(){clearInterval(u)}}}console.log("Time JS loaded",Date.now());typeof document>"u"&&console.log("No document object, skipping DOM updates");typeof window>"u"&&console.log("No window object, skipping DOM updates");var p=document.querySelectorAll(".brand-mark");for(let e of p)e&&typeof e=="object"&&(e.innerHTML="&gt;_");var l=document?.getElementById("year");l&&typeof l=="object"&&(l.textContent=new Date().getFullYear());var g=()=>{let e=null;return{setItem:t=>{e=t},getItem:()=>e,item:e}};console.log("Time JS finished",Date.now());var{getItem:m,setItem:i,item:f}=g();i("Hello from time.js state!");console.log("State item:",m());i("Another value");console.log("State item updated:",m());console.log("Final state item:",f);var c=document?.getElementById("test-button"),d=a(document.getElementById("test-display")),r=0;c?c.addEventListener("click",()=>{if(i(r++),!d){console.log("Button or display element not found, skipping event listener setup.");return}d.setCount(r)}):console.log("Button or display element not found, skipping event listener setup.");
+//# sourceMappingURL=time.bundle.js.map
